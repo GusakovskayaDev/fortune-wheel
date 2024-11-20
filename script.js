@@ -1,6 +1,6 @@
-const wheel = document.getElementById('wheel');
-const spinButtons = document.querySelectorAll('.buttons_button');
-const spanAttempts = document.querySelector('.atempts');
+const wheel = document.getElementById('wheel__wheel');
+const spinButtons = document.querySelectorAll('.buttons__button');
+const spanAttempts = document.querySelector('.attempts__span');
 let attempt = Number(localStorage.getItem('attempt')) || 0;
 
 updateAttempt();
@@ -8,8 +8,8 @@ updateAttempt();
 // Слушатель на колесо для вращения
 wheel.addEventListener('click', () => {
 	if(attempt){
-		spinWheel();
 		attempt--;
+		spinWheel();
 		updateAttempt();
 		saveStorage(attempt);
 	}else{
@@ -45,14 +45,14 @@ spinButtons.forEach((button) => {
 		attempt++;
 		updateAttempt();
 
-		this.classList.add('caseDone');
+		this.classList.add('buttons__button_done');
 		this.textContent = 'Начисленно';
 
 		let idDiv = this.getAttribute('data-target');
 		console.log(idDiv);
 		let div = document.getElementById(idDiv);
 		console.log(div);
-		div.classList.add('caseDone');
+		div.classList.add('buttons__left-side_done');
 		saveStorage(attempt);
 	});
 });

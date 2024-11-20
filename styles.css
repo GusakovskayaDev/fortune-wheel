@@ -11,107 +11,152 @@ body{
 	overflow: hidden;
 }
 
-/* Containers ----------------------- */
-.container{
+/* Fortune Wheel ----------------------- */
+.fortune-wheel{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-.container_grid{
+.fortune-wheel__body{
 	width: 1339px;
 }
-/* end ----------------------- */
-
-/* Main ----------------------- */
-.fortuneWheel{
+.fortune-wheel__header{
+	margin: 56px 0px 56px 0px;
+}
+/* Block */
+.header{
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+	color: white;
+}
+.header__span{
+	color: red;
+}
+.fortune-wheel__wheel-block{
+	/* ? */
+}
+.fortune-wheel__columns{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 80px; 
+}
+.fortune-wheel__left-side{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-left: 110px;
+}
+.fortune-wheel__arrow{
+	height: 60px;
+	rotate: 90deg;
+}
+.fortune-wheel__wheel{
+	/* ? */
+}
+/* Block */
+.wheel{
+	position: relative;
+}
+.wheel__wheel{
+	width: 506px;
+	height: 506px;
+	border-radius: 50%;
+	border: 10px solid #ff4500;
+	position: relative;
+	overflow: hidden;
+	transform-origin: center;
+	rotate: -30deg;
+	cursor: pointer;
+}
+.wheel__segment{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	color: white;
+	text-align: center;
+	line-height: 280px;
+	transform-origin: 100% 100%;
+	font-weight: bold;
+	border-right: 2px solid #ff5733; 
+}
+.wheel__image{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 40px;
+	right: 50px;
+}
+.fortune-wheel__right-side{
+	padding-right: 134px;
+	padding-left: 32px;
+	padding-top: 20px;
+}
+.fortune-wheel__attempts{
+	/* ? */
+}
+/* Block */
+.attempts{
 
 }
-		/* Заголовок */
-		.fortuneWheel_title{
-			text-align: center;
-			margin-top: 56px;
-			font-size: 42px;
-			font-weight: bold;
-			color: white;
-		}
-		.title_span{
-			color: red;
-		}
-		/* Left and Right Blocks */
-		.twoColumn{
-			/* display: grid;
-			grid-template-columns: 719px 619px;*/
-			margin-top: 80px; 
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 40px;
-		}
-				/* Left Side */
-				.leftSide{
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					padding-left: 110px;
-				}
-				.right_arrow{
-					height: 60px;
-					rotate: 90deg;
-				}
-				/* Right Side */
-				.rightSide{
-					padding-right: 134px;
-					padding-left: 32px;
-					padding-top: 20px;
-				}
-						.rightSide_title{
-							color: white;
-						}
-						.rightSide_desc{
-							font-size: 12px;
-							width: 420px;
-							margin-top: 40px;
-							margin-bottom: 40px;
-							color: white;
-							line-height: 20px;
-						}
-						.button_contaner{
-							display: flex;
-							flex-direction: column;
-							gap: 14px;
-						}
-								.buttons{
-									display: flex;
-									gap: 4px;
-								}
-										.buttons_leftSide{
-											display: flex;
-											justify-content: space-between;
-											align-items: center;
-											flex: 1;
-											padding: 20px;
-											background-color: #4c4c4c;
-											color: white;
-											width: 300px;
-										}
-												.buttons_text{
-													font-size: 12px;
-												}
-												.buttons_text2{
-													font-size: 10px;
-												}
-										.buttons_button{
-											color: white;
-											border: none;
-											background-color: orangered;
-											padding: 16px 40px;
-											font-size: 14px;
-											cursor: pointer;
-											width: 150px;
-										}
-/* end ----------------------- */
+.attempts__title{
+	color: white;
+}
+.attempts__span{
+/* ? */
+}
+.fortune-wheel__description{
+	font-size: 12px;
+	width: 420px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: white;
+	line-height: 20px;
+}
+.fortune-wheel__buttons{
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+.buttons__container{
+	/* ? */
+}
+.buttons{
+	display: flex;
+	gap: 4px;
+}
+.buttons__left-side{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+	padding: 20px;
+	background-color: #4c4c4c;
+	color: white;
+	width: 300px;
+}
+.buttons__task{
+	font-size: 12px;
+}
+.buttons__plus-attempt{
+	font-size: 10px;
+}
+.buttons__button{
+	padding: 16px 40px 16px 40px;
+}
+/* Block */
+.button{
+	color: white;
+	border: none;
+	background-color: orangered;
+	font-size: 14px;
+	cursor: pointer;
+	width: 150px;
+}
 
 /* Footer ----------------------- */
 .footer{
@@ -126,60 +171,30 @@ body{
 	align-items: center;
 	justify-content: center;
 }
-		.footer_container{
-			width: 1339px;
-			display: flex;
-			justify-content: right;
-			gap: 60px;
-			padding-right: 399px;
-		}
-				.footer_a{
-					text-decoration: none;
-					color: white;
-					font-weight: bold;
-					font-size: 14px;
-				}
-/* end ----------------------- */
-
-
-/* Fortune Wheel ----------------------- */
-.wheel_container {
-  position: relative;
+.footer__container{
+	width: 1339px;
+	display: flex;
+	justify-content: right;
+	gap: 60px;
+	padding-right: 399px;
 }
-		.wheel {
-			width: 506px;
-			height: 506px;
-			border-radius: 50%;
-			border: 10px solid #ff4500;
-			position: relative;
-			overflow: hidden;
-			transform-origin: center;
-			rotate: -30deg;
-			cursor: pointer;
-		}
-				.segment {
-					position: absolute;
-					width: 50%;
-					height: 50%;
-					color: white;
-					text-align: center;
-					line-height: 280px;
-					transform-origin: 100% 100%;
-					font-weight: bold;
-					border-right: 2px solid #ff5733; 
-					
-				}
-						.segment_img{
-							width: 80px;
-							height: 80px;
-							position: absolute;
-							top: 40px;
-							right: 50px;
-						}
+.footer_link{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
 /* end ----------------------- */
 
 /* Особые стили ----------------------- */
-.caseDone{
+.buttons__button_done{
+	background-color: #2e2e2e;
+	border: 1px solid #3b3b3b;
+	cursor: not-allowed;
+  pointer-events: none;
+	color: gray;
+}
+.buttons__left-side_done{
 	background-color: #2e2e2e;
 	border: 1px solid #3b3b3b;
 	cursor: not-allowed;

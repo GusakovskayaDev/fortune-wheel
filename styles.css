@@ -75,6 +75,7 @@ body{
 							margin-top: 40px;
 							margin-bottom: 40px;
 							color: white;
+							line-height: 20px;
 						}
 						.button_contaner{
 							display: flex;
@@ -96,7 +97,7 @@ body{
 											width: 300px;
 										}
 												.buttons_text{
-													font-size: 14px;
+													font-size: 12px;
 												}
 												.buttons_text2{
 													font-size: 10px;
@@ -105,9 +106,10 @@ body{
 											color: white;
 											border: none;
 											background-color: orangered;
-											padding: 20px 44px;
-											font-size: 16px;
+											padding: 16px 40px;
+											font-size: 14px;
 											cursor: pointer;
+											width: 150px;
 										}
 /* end ----------------------- */
 
@@ -148,7 +150,7 @@ body{
 			width: 506px;
 			height: 506px;
 			border-radius: 50%;
-			border: 10px solid orangered;
+			border: 10px solid #ff4500;
 			position: relative;
 			overflow: hidden;
 			transform-origin: center;
@@ -174,4 +176,14 @@ body{
 							top: 40px;
 							right: 50px;
 						}
+/* end ----------------------- */
+
+/* Особые стили ----------------------- */
+.caseDone{
+	background-color: #2e2e2e;
+	border: 1px solid #3b3b3b;
+	cursor: not-allowed;
+  pointer-events: none;
+	color: gray;
+}
 /* end ----------------------- */

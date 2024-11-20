@@ -1,10 +1,20 @@
 const wheel = document.getElementById('wheel');
 const spinButtons = document.querySelectorAll('.buttons_button');
+const spanAttempts = document.querySelector('.atempts');
+let attempt = Number(localStorage.getItem('attempt')) || 0;
+
+updateAttempt();
 
 // Слушатель на колесо для вращения
 wheel.addEventListener('click', () => {
-	spinWheel();
-})
+	if(attempt){
+		spinWheel();
+		attempt--;
+		updateAttempt();
+	}else{
+		alert('У вас 0 попыток :(');
+	}
+});
 
 // Функция для случайного вращения
 const sectors = 6;
@@ -26,4 +36,26 @@ function spinWheel() {
     wheel.style.transition = 'transform 5s ease-out';
     wheel.style.transform = `rotate(${randomDeg}deg)`;
   }, 10);
+}
+
+// Функция получение +1 попытки
+spinButtons.forEach((button) => {
+	button.addEventListener('click', function() {
+		attempt++;
+		updateAttempt();
+
+		this.classList.add('caseDone');
+		this.textContent = 'Начисленно';
+
+		let idDiv = this.getAttribute('data-target');
+		console.log(idDiv);
+		let div = document.getElementById(idDiv);
+		console.log(div);
+		div.classList.add('caseDone');
+		localStorage.setItem('attempt', attempt);
+	});
+});
+
+function updateAttempt(){
+	spanAttempts.textContent = attempt;
 }

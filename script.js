@@ -11,6 +11,7 @@ wheel.addEventListener('click', () => {
 		spinWheel();
 		attempt--;
 		updateAttempt();
+		saveStorage(attempt);
 	}else{
 		alert('У вас 0 попыток :(');
 	}
@@ -52,10 +53,14 @@ spinButtons.forEach((button) => {
 		let div = document.getElementById(idDiv);
 		console.log(div);
 		div.classList.add('caseDone');
-		localStorage.setItem('attempt', attempt);
+		saveStorage(attempt);
 	});
 });
 
 function updateAttempt(){
 	spanAttempts.textContent = attempt;
+}
+
+function saveStorage(attempt){
+	localStorage.setItem('attempt', attempt);
 }

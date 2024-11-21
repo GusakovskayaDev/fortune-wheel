@@ -162,8 +162,6 @@ body{
 	justify-content: right;
 	gap: 60px;
 	padding-right: 399px;
-}
-.footer_ul{
 	list-style-type: none;
 }
 .footer_link{
@@ -197,18 +195,22 @@ body{
 
 /*smartphones mobiles (portrait)*/
 @media (min-width: 320px) and (max-width: 480px){
+	html{
+		overflow-x: hidden;
+	}
 	body{
 		overflow-x: hidden;
 		overflow-y: auto;
 		margin-bottom: 128px;
+		width: 414px;
 	}
 	.fortune-wheel__body{
-		width: 690px;
+		width: 414px;
 	}
 	.fortune-wheel__header{
 		width: 414px;
 		margin: 40px 0px 26px 0px;
-		/* background-color: pink; */
+		
 	}
 	/* Block */
 	.header{
@@ -226,6 +228,9 @@ body{
 	.fortune-wheel__right-side{
 		padding: 0px;
 		margin: 20px;
+	}
+	.fortune-wheel__wheel-block{
+		width: 414px;
 	}
 	.wheel__wheel{
 		width: 380px;
@@ -266,10 +271,10 @@ body{
 		width: 414px;
 	}
 	.footer__container{
-		width: 414px;
 		gap: 50px;
 		justify-content: center;
 		padding: 0px;
+		width: 414px;
 	}
 	.fortune-wheel{
 		display: block;

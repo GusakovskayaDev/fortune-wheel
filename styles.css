@@ -18,13 +18,12 @@ body{
 	align-items: center;
 	justify-content: center;
 }
-.fortune-wheel__body{
+ .fortune-wheel__body{
 	width: 1339px;
 }
 .fortune-wheel__header{
 	margin: 56px 0px 56px 0px;
 }
-/* Block */
 .header{
 	text-align: center;
 	font-size: 26px;
@@ -33,9 +32,6 @@ body{
 }
 .header__strong{
 	color: red;
-}
-.fortune-wheel__wheel-block{
-	/* ? */
 }
 .fortune-wheel__columns{
 	display: flex;
@@ -55,10 +51,7 @@ body{
 	height: 60px;
 	rotate: 90deg;
 }
-.fortune-wheel__wheel{
-	/* ? */
-}
-/* Block */
+
 .wheel{
 	position: relative;
 }
@@ -96,15 +89,10 @@ body{
 	padding-left: 32px;
 	padding-top: 20px;
 }
-.fortune-wheel__attempts{
-	/* ? */
-}
-/* Block */
+
+
 .attempts{
 	color: white;
-}
-.attempts__count{
-/* ? */
 }
 .fortune-wheel__description{
 	font-size: 12px;
@@ -142,7 +130,7 @@ body{
 .buttons__button{
 	padding: 16px 40px 16px 40px;
 }
-/* Block */
+
 .button{
 	color: white;
 	border: none;
@@ -341,21 +329,28 @@ body{
 	}
 	.fortune-wheel__body{
 		width: 690px;
+		background-color: green;
+	}
+	.fortune-wheel__header{
+		width: 552px;
+		margin: 40px 0px 26px 0px;
 	}
 	/* Block */
 	.header{
 		font-size: 14px;
 	}
 	.fortune-wheel__columns{
-		flex-direction: column;
-		gap: 40px;
-		margin-top: 70px; 
+		display: block;
+		margin-top: 0px; 
+		width: 552px;
 	}
 	.fortune-wheel__left-side{
-		padding: 0px;
+		padding: 0px 0px 40px 0px;
+		margin: 0px 0px 0px 0px;
 	}
 	.fortune-wheel__right-side{
 		padding: 0px;
+		margin: 20px;
 	}
 	.wheel__wheel{
 		width: 400px;
@@ -390,5 +385,8 @@ body{
 		gap: 50px;
 		padding: 0px;
 		justify-content: center;
+	}
+	.fortune-wheel{
+		display: block;
 	}
 }

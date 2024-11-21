@@ -27,11 +27,11 @@ body{
 /* Block */
 .header{
 	text-align: center;
-	font-size: 42px;
+	font-size: 26px;
 	font-weight: bold;
 	color: white;
 }
-.header__span{
+.header__strong{
 	color: red;
 }
 .fortune-wheel__wheel-block{
@@ -101,12 +101,9 @@ body{
 }
 /* Block */
 .attempts{
-
-}
-.attempts__title{
 	color: white;
 }
-.attempts__span{
+.attempts__count{
 /* ? */
 }
 .fortune-wheel__description{
@@ -117,13 +114,10 @@ body{
 	color: white;
 	line-height: 20px;
 }
-.fortune-wheel__buttons{
+.fortune-wheel__tasks{
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
-}
-.buttons__container{
-	/* ? */
 }
 .buttons{
 	display: flex;

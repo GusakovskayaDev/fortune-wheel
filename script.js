@@ -1,6 +1,6 @@
 const wheel = document.getElementById('wheel__wheel');
 const spinButtons = document.querySelectorAll('.buttons__button');
-const spanAttempts = document.querySelector('.attempts__span');
+const spanAttempts = document.querySelector('.attempts__count');
 let attempt = Number(localStorage.getItem('attempt')) || 0;
 
 updateAttempt();
